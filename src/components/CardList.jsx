@@ -10,7 +10,6 @@ export default function CardList() {
   const [videos, setVideos] = useState([]);
 
   function loadClient() {
-    console.log("API", process.env.REACT_APP_API_KEY)
     window.gapi.client.setApiKey(process.env.REACT_APP_API_KEY); 
     return window.gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
         .then(function() { console.log("GAPI client loaded for API"); },
